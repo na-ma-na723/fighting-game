@@ -103,15 +103,15 @@ function rectangularCollision({rectangle1, rectangle2}) {
         rectangle1.attackBox.position.y + rectangle1.attackBox.height >= rectangle2.attackBox.position.y && rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.attackBox.height )
 }
 
-let timer = 100;
+let timer = 10;
 function decTimer() {
     if(timer > 0) {
-        setTimeout( decTimer(), 1000);
+        setTimeout( decTimer, 1000);
         timer--;
         document.querySelector(".timer").innerHTML = timer;
     }
 
-    if( player.health === enemy.health ) {
+    if( timer == 0 && player.health === enemy.health ) {
         console.log("tie");
     }
 }
