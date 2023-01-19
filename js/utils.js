@@ -18,7 +18,7 @@ function endGame({player, enemy, timerId}) {
     document.querySelector(".result").style.display = "flex";
 }
 
-let timer = 10;
+let timer = 100;
 let timerId;
 function decTimer() {
     if(timer > 0) {
