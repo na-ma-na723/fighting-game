@@ -4,6 +4,8 @@ const c = canvas.getContext("2d");
 canvas.width = 1024;
 canvas.height = 576;
 
+console.log(typeof canvas.width, canvas.height)
+
 c.fillRect(0, 0, canvas.width, canvas.height);
 
 const gravity = 0.7;
@@ -85,7 +87,7 @@ const enemy = new Fighter({
     scale: 2.5,
     offset: {
         x: 215,
-        y: 167
+        y: 169
     },
     sprites: {
         idle: {
@@ -150,6 +152,10 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height);
     background.update();
     shop.update();
+
+    c.fillStyle = 'rgba(255, 255, 255, 0.15)'
+    c.fillRect(0,0, canvas.width, canvas.height)
+
     player.update();
     enemy.update();
 

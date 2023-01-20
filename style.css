@@ -15,29 +15,38 @@ body{
     align-items: center;
     overflow: hidden;
     font-family: "japanese", sans-serif;
-    background-image: url(https://c4.wallpaperflare.com/wallpaper/943/424/1010/vagabond-takehiko-inoue-wallpaper-thumb.jpg);
     background-size: contain;
+    margin: 0;
 }
 
 .main-container{
+    width: 100%;
+    height: 100%;
     position: relative; 
     display: inline-block;
 }
 
 .health-bar{
     position: absolute;
-    top: -100px;
+    /* top: -100px; */
     display: flex; 
     width: 100%; 
     align-items: center;
-    /* padding: 20px; */
+    padding: 0 20px;
 }
 
 .sprite{
     position: relative;
-    background-color: yellow;
+    background: rgb(191,20,25);
+    background: linear-gradient(90deg, rgba(191,20,25,1) 24%, rgba(78,5,5,1) 73%);
+    border: 3px solid white;
     height: 30px; 
     width: 100%;
+}
+
+.enemy{
+    background: rgb(78,5,5);
+    background: linear-gradient(90deg, rgba(78,5,5,1) 24%, rgba(191,20,25,1) 73%);
 }
 
 .timer{
@@ -48,8 +57,7 @@ body{
     height: 100px; 
     flex-shrink: 0;
     font-size: 40px;
-    /* color: white; */
-    /* font-family: "japanese", sans-serif; */
+    color: white;
 }
 
 .playerhealth{
@@ -60,6 +68,7 @@ body{
     background-color: blue;
     width: 100%;
     height: 100%;
+    transition: 0.5s ease-in;
 }
 
 .enemyhealth{
@@ -68,6 +77,12 @@ body{
     left: 0;
     bottom: 0;
     background-color: blue;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in;
+}
+
+canvas{
     width: 100%;
     height: 100%;
 }
@@ -82,4 +97,6 @@ body{
     display: none;
     justify-content: center;
     align-items: center;
+    font-size: 80px;
+    transition: 0.5s ease-in-out;
 }
